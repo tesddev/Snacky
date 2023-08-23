@@ -64,11 +64,33 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: const [Locale('en', '')],
       theme: ThemeData(
         brightness: Brightness.light,
-        scrollbarTheme: ScrollbarThemeData(),
+        scrollbarTheme: ScrollbarThemeData(
+          thickness: MaterialStateProperty.all(2.0),
+          thumbColor: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.dragged)) {
+              return Color(4279506971);
+            }
+            if (states.contains(MaterialState.hovered)) {
+              return Color(4279506971);
+            }
+            return Color(4279506971);
+          }),
+        ),
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        scrollbarTheme: ScrollbarThemeData(),
+        scrollbarTheme: ScrollbarThemeData(
+          thickness: MaterialStateProperty.all(2.0),
+          thumbColor: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.dragged)) {
+              return Color(4294967295);
+            }
+            if (states.contains(MaterialState.hovered)) {
+              return Color(4294967295);
+            }
+            return Color(4294967295);
+          }),
+        ),
       ),
       themeMode: _themeMode,
       routerConfig: _router,

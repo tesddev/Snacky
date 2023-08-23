@@ -46,6 +46,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'HomePage',
           path: '/homePage',
           builder: (context, params) => HomePageWidget(),
+        ),
+        FFRoute(
+          name: 'SplashScreen',
+          path: '/splashScreen',
+          builder: (context, params) => SplashScreenWidget(),
+        ),
+        FFRoute(
+          name: 'OnboardingPage',
+          path: '/onboardingPage',
+          builder: (context, params) => OnboardingPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
