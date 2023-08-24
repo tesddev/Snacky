@@ -163,7 +163,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                   padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 16.0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      context.pushNamed('HomePage');
+                      context.pushNamed('LoginScreen');
                     },
                     text: 'Next',
                     options: FFButtonOptions(
@@ -198,7 +198,7 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
                   padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 16.0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      context.pushNamed('HomePage');
+                      context.pushNamed('LoginScreen');
                     },
                     text: 'Skip',
                     options: FFButtonOptions(

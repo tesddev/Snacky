@@ -234,8 +234,8 @@ class _LoginScreenWidgetState extends State<LoginScreenWidget> {
                               style: FlutterFlowTheme.of(context).bodyMedium,
                             ),
                             FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
+                              onPressed: () async {
+                                context.pushNamed('SignupScreen');
                               },
                               text: 'Sign up',
                               options: FFButtonOptions(
