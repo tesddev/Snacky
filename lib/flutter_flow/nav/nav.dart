@@ -56,6 +56,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'OnboardingPage',
           path: '/onboardingPage',
           builder: (context, params) => OnboardingPageWidget(),
+        ),
+        FFRoute(
+          name: 'LoginScreen',
+          path: '/loginScreen',
+          builder: (context, params) => LoginScreenWidget(),
+        ),
+        FFRoute(
+          name: 'SignupScreen',
+          path: '/signupScreen',
+          builder: (context, params) => SignupScreenWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
